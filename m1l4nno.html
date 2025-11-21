@@ -1,0 +1,393 @@
+<!-- Developed by Milanno-->
+<!-- Discord: m1l4nno.007-->
+<!-- For GITHUB-->
+
+
+<!DOCTYPE html>
+
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profil — M1l4nno.007</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text: #e9eef6;
+            --muted: rgba(233, 238, 246, 0.7);
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.12);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+            background: #000;
+            font-family: Inter;
+            color: var(--text)
+        }
+
+        .banner {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3ViZ2p2c2Z2a2QwemxvcXU3eGk5Mmc5cmdoaWUxZ3EzbTJwMWdkNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78nXADhnE4BQfG4gup/giphy.gif') center/cover;
+            filter: brightness(.55);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(140deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .55));
+            z-index: 1
+        }
+
+        .card {
+            position: relative;
+            z-index: 2;
+            width: min(420px, 92%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            background: var(--glass);
+            backdrop-filter: blur(9px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+        .pfp {
+            width: 150px;
+            height: 150px;
+            border-radius: 18px;
+            margin: auto;
+            background: url('https://i.pinimg.com/736x/9c/13/fc/9c13fc4f3a8385de16b904b326a28031.jpg') center/cover;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -.5px
+        }
+
+        .player iframe {
+            width: 100%;
+            border-radius: 14px
+        }
+
+        .discord {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discord::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .discord:hover::before {
+            left: 100%;
+        }
+
+        .discord:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(88, 101, 242, 0.4);
+            border-color: rgba(88, 101, 242, 0.5);
+        }
+
+        .discord svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.4s ease;
+        }
+
+        .discord:hover svg {
+            transform: rotate(15deg) scale(1.2);
+        }
+
+
+
+        @keyframes magical-glow {
+            0% {
+                box-shadow:
+                    0 25px 50px rgba(0, 0, 0, 0.7),
+                    0 0 80px rgba(135, 206, 250, 0.4),
+                    0 0 120px rgba(147, 112, 219, 0.3);
+            }
+
+            100% {
+                box-shadow:
+                    0 25px 50px rgba(0, 0, 0, 0.7),
+                    0 0 100px rgba(135, 206, 250, 0.6),
+                    0 0 150px rgba(147, 112, 219, 0.5);
+            }
+        }
+
+        @keyframes rotate-light {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .groondrp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .groondrp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .groondrp-btn:hover::before {
+            left: 100%;
+        }
+
+        .groondrp-btn:hover {
+            background: rgba(0, 255, 0, 0.1);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+            border-color: rgba(0, 255, 0, 0.4);
+        }
+
+        .github-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .github-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(76, 0, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .github-btn:hover::before {
+            left: 100%;
+        }
+
+        .github-btn:hover {
+            background: rgba(60, 6, 161, 0.1);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(76, 0, 255, 0.4);
+            border-color: rgba(76, 0, 255, 0.4);
+        }
+
+        .protection-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 9999;
+            display: none;
+        }
+
+        .protection-overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="overlay"></div>
+
+        <div class="card">
+            <div class="pfp"></div>
+            <h1>M1l4nno.007</h1>
+
+            <a class="discord" href="https://discord.com/users/1046511558177587314" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20.317 4.369a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.211.375-.444.864-.608 1.249a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.249.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 006.072 3.072.078.078 0 00.084-.027c.468-.638.885-1.312 1.248-2.017a.076.076 0 00-.041-.105 13.1 13.1 0 01-1.872-.892.077.077 0 01-.008-.128c.126-.094.252-.19.372-.288a.074.074 0 01.078-.01c3.927 1.793 8.18 1.793 12.061 0a.073.073 0 01.079.009c.12.098.246.195.372.289a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.891.076.076 0 00-.04.106c.39.704.807 1.378 1.248 2.016a.076.076 0 00.084.028 19.876 19.876 0 006.073-3.073.077.077 0 00.03-.056c.506-5.271-.838-9.764-3.548-13.66a.061.061 0 00-.031-.03z" />
+                </svg>
+                Discord
+            </a>
+
+
+
+
+            <a class="groondrp-btn" href="https://gta5grand.com/?ref=175838" target="_blank">
+                <span>GrööndRP</span>
+            </a>
+
+            <a class="github-btn" href="https://github.com/m1l4nno" target="_blank">
+                <span>GitHub</span>
+            </a>
+
+            
+
+            <div class="player">
+                <iframe src="https://open.spotify.com/embed/track/2TGL7kbnoUvneazHOjIwr9?utm_source=generator"
+                    height="152" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="protection-overlay" id="protectionOverlay"></div>
+
+    <script>
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'F12') {
+                event.preventDefault();
+                return false;
+            }
+
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+                return false;
+            }
+
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+                return false;
+            }
+
+            if (event.ctrlKey && event.key === 'U') {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+                event.preventDefault();
+                return false;
+            }
+
+            if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        let devToolsOpen = false;
+
+        setInterval(function () {
+            const widthThreshold = window.outerWidth - window.innerWidth > 160;
+            const heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+            if ((widthThreshold || heightThreshold) && !devToolsOpen) {
+                devToolsOpen = true;
+                document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;color:white;font-size:24px;">Zugriff verweigert</div>';
+                setTimeout(() => {
+                    window.close();
+                }, 1000);
+            }
+        }, 100);
+
+        document.addEventListener('dragstart', function (event) {
+            if (event.target.tagName === 'IMG') {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('selectstart', function (event) {
+            event.preventDefault();
+            return false;
+        });
+
+        Object.defineProperty(window, 'eval', {
+            value: function () {
+                return null;
+            }
+        });
+
+        Object.defineProperty(window, 'console', {
+            value: {},
+            writable: false
+        });
+    </script>
+</body>
+
+</html>
